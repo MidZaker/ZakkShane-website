@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@500&family=Montserrat:ital,wght@1,300&family=Silkscreen&family=Unbounded:wght@500&display=swap');
+*{
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+ margin:0;
+ padding:0;
+overflow-x: hidden;
+
+}
+html{
+   scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(19, 19, 19);
+}
+
+ul{
+    padding-bottom: 20px;
+    background-color: rgb(255, 102, 68);
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    
+    gap: 1em;
+    display:flex;
+  margin-left: 20px;
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  
+ 
+}
+
+.logo img{
+    border-radius: 10px;
+}
+  .tree_logo{
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 30px;
+    color: white;
+  }
+
+  .tree_logo span{
+    color: rgb(151, 33, 12);
+  }
+
+
+
+#list{
+    margin-top: 5px;
+    display: flex;
+}
+
+li{
+    margin-top: 20px;
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    cursor: default;
+    transform: translateX(1px);
+    transition: 0.1s;
+    outline: white;
+    position: relative;
+}
+
+a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.25s ease-out;
+}
+
+a:hover::before{
+    width: 100%;
+}
+
+
+/* Section area section 1 */
+
+.sect1{
+
+    position: relative;
+   
+    height: 90vh;
+    background-size: cover;
+    background-image: url(/Practicezaker/Section1.jpg);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex: wrap;
+    flex-direction: row;
+    transition: 0.5s;
+    
+  
+
+}
+
+
+
+
+.contain_sect1{
+    font-family: 'Inter', sans-serif;
+ font-size: 60px;
+ color: white;
+ font-weight: bolder;
+ margin: auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ justify-items: center;
+ flex-shrink: 0;
+ flex-direction: column;
+ flex-wrap: wrap;
+overflow: visible;
+ animation: scale1 3s linear;
+}
+
+@keyframes scale1{
+0%{
+    transform: scale(0);
+}
+20%{
+    transform: scale(2);
+}
+90%{
+    transform: scale(2.1);
+}
+100%{
+    transform:scale(1);
+}
+ 
+}
+
+
+
+/* Animation from from h2 */
+
+@keyframes move {
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+/* section1 screen responsive interaction! */
+@media (max-width: 500px) {
+    .contain_sect1 h1{
+        font-size: 50px;
+
+    }
+    .contain_sect1 h2{
+        font-size: 20px;
+    }
+    p{
+
+      font-size: 15px;
+    }
+    a{
+        display: none;
+    }
+}
+
+ h2{
+    animation: move 1s linear infinite;
+    opacity: 50%;
+    font-size: 20px;
+}
+
+.innersect1{
+    position: absolute;
+   margin: 50px;
+   align-items: center;
+   justify-content: center;
+   height: 50%;
+   color: rgb(8, 8, 8);
+   
+  
+}
+
+.innersect1 p{
+    margin: auto;
+    max-height: 350px;
+   
+
+}
+
+
+
+.back-frem{
+    width:18rem;
+    height: 6rem;
+    background: wheat;
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    justify-content: space-around;
+    border-radius: 10px;
+    opacity: 0.5;
+    align-items: center;
+    z-index: 0;
+    flex-direction: row;
+}
+
+.back-frem .back-change{
+  
+    height: 91px;
+    background: wheat;
+    overflow: hidden;
+    border-radius: 23px;
+    z-index: 1;
+}
+
+.back-frem .back-change img{
+   
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/*Section area section 2 */
+
+#sect2{
+   
+    height: 200vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+       
+}
+
+.contain_works{
+    
+    margin: 0px 0px 0px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.contain_sect2{
+    
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    box-shadow: 1px 1px 5px;
+    min-width: 400px;
+   margin: 50px 10px  20px;
+   flex-grow: 1;
+   overflow-y:hidden;
+ 
+}
+
+
+
+.innersect2{
+    margin: 30px;
+    flex:1;
+}
+
+.innersect2 p{
+    margin-top: 20px;
+}
+@media (max-width:2000px) {
+    .sect2{
+        overflow-y: scroll;
+    }
+    
+}
+
+
+@media (max-width:600px) {
+
+    header{
+        /* z-index gamit kay na sya if ganahan ka e front nmo ang selected class or id */
+        z-index: 1;
+        width: 100%;
+        position:fixed;
+    }
+
+    .contain_sect1{
+        animation: none;
+    }
+
+    .back-frem{
+        position: absolute;
+        bottom: 50px;
+        height: 100px;
+        background: none;
+        opacity: 1;
+    }
+
+    .sect1{
+        height: 90vh;
+    }
+    .contain_sect2{
+        width: 200px;
+        height: 300px;
+    }
+    .sect2{
+        height: 500vh;
+    }
+}
+
+
+/* Section 3 area! */
+
+#sect3{
+   
+    background-color: rgb(255, 102, 68);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    justify-items: center;
+    display: flex;
+    height: 100px;
+    box-shadow: 1px 1px 5px;
+    
+}
+
+#sect3 h1{
+    margin-left: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
+.facebookcontact{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap;
+
+}
+ .facebookcontactinside{
+  
+background-color: rgb(252, 252, 252);
+width: 800px;
+height: 600px;
+box-shadow: 1px 1px 5px;
+justify-content: center;
+justify-items: center;
+}
+
+.facebookcontactinside button{
+    background-color:  rgb(255, 102, 68);
+    color: white;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    outline: none;
+   cursor: pointer;
+   padding: 15px;
+    border-radius: 10px;
+    
+}
+
+
+.textareacontact{
+    margin-top: 50px;
+    gap: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.textareacontact input, textarea{
+width: 300px;
+justify-content: center;
+text-align: center;
+padding-top: 10px;
+padding-bottom: 10px;
+    }
+
+    #message{
+        
+        justify-content: center;
+        text-align: center;
+        height: 200px;
+        justify-items: center;
+        padding-top: 10px;
+    }
+
+   
+
+.facebookcontactinside h1{
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.headerdaw{
+    background-color: rgb(255, 102, 68) ;
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
+}
+.headerdaw h1{
+    font-size: 20px;
+    opacity: 0.4;
+    margin-top: 20px;
+}
+
+
+
+
+
